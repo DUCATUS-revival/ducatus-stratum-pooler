@@ -11,6 +11,7 @@ RUN ln -s /usr/bin/python2.7 /usr/bin/python && cd node-v0.10.41 && ls && ./conf
 RUN npm install request bunyan && git clone https://github.com/zone117x/node-stratum-pool.git node_modules/stratum-pool && cd /node_modules/stratum-pool && npm update
 
 ADD pool.js /
+ADD test.js /
 ADD run.sh  /
 
 CMD ["/run.sh"]
