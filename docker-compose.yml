@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+        pool:
+                image: solo-pool
+                network_mode: host
+                environment:
+                        - POOL_PORT="12121" 
+                        - MINER_WORKER="worker" 
+                        - MINER_PASS="pass" 
+                        - DAEMON_HOST="198.58.114.189" 
+                        - DAEMON_USER="user" 
+                        - DAEMON_PASS="pass" 
+                        - DAEMON_PORT="9690" 
+                        - DEFAULT_DIFF="1.0" 
+                        - DIFF_VARIANCE="10.0"  
