@@ -92,10 +92,10 @@ var pool = Stratum.createPool({
           - https://en.bitcoin.it/wiki/Running_bitcoind */
     "daemons": [
         {   //Main daemon instance
-            "host": "198.58.114.189",
+            "host": "ducatus-pooler-node",
             "port": 9690,
-            "user": "user",
-            "password": "pass"
+            "user": "Ftf1g6r3KJ",
+            "password": "fwhYFRW7vZ"
         }
     ],
 

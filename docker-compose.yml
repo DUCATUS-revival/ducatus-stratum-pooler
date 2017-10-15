@@ -1,9 +1,20 @@
 version: '2'
 
 services:
+        ducatus-pooler-node:
+                image: ducatuscoin 
+                command: bash -c 'ducatuscoind; tail -f /dev/random'
+                ports:
+                        - 9691:9691
+                volumes:
+                        - ducatus-pooler-node-volume:/root/.ducatuscoin
+                        - ./ducatuscoin.conf:/root/.ducatuscoin/ducatuscoin.conf
         pool:
                 image: solo-pool
-                network_mode: host
+                links:
+                        - ducatus-pooler-node
+                ports:
+                        - 3032:3032
                 environment:
                         - POOL_PORT="12121" 
                         - MINER_WORKER="worker" 
@@ -14,3 +25,5 @@ services:
                         - DAEMON_PORT="9690" 
                         - DEFAULT_DIFF="1.0" 
                         - DIFF_VARIANCE="10.0"  
+volumes:
+        ducatus-pooler-node-volume:
