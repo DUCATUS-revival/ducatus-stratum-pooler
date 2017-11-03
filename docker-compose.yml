@@ -2,7 +2,7 @@ version: '2'
 
 services:
         ducatus-pooler-node:
-                image: ducatuscoin 
+                image: ducatuscoin-p90x 
                 command: bash -c 'ducatuscoind; sleep 1; tail -f /root/.ducatuscoin/debug.log'
                 restart: always
                 ports:
@@ -12,7 +12,7 @@ services:
                         - ducatus-pooler-node-volume:/root/.ducatuscoin
                         - ./ducatuscoin.conf:/root/.ducatuscoin/ducatuscoin.conf
         pool:
-                image: solo-pool
+                image: solo-pool-p90x
                 restart: always
                 links:
                         - ducatus-pooler-node
