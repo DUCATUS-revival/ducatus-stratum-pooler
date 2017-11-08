@@ -14,4 +14,4 @@ echo "maxconnections=$CON_TOTAL" >> $DUCATUSD_CONF_FILE
 echo "addnode=snod-0.p90.ducatus.io" >> $DUCATUSD_CONF_FILE
 echo "addnode=snod-1.p90.ducatus.io" >> $DUCATUSD_CONF_FILE
 echo "addnode=snod-2.p90.ducatus.io" >> $DUCATUSD_CONF_FILE
-sudo docker build . -t solo-pool
+sudo docker build . -t solo-pool-p90x
