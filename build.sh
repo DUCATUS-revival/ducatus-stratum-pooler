@@ -11,5 +11,7 @@ echo "server=1" >> $DUCATUSD_CONF_FILE
 echo "daemon=1" >> $DUCATUSD_CONF_FILE
 echo "disablewallet=1" >> $DUCATUSD_CONF_FILE
 echo "maxconnections=$CON_TOTAL" >> $DUCATUSD_CONF_FILE
-echo "addnode=p90-0.ducatus.io" >> $DUCATUSD_CONF_FILE
+echo "addnode=snod-0.p90.ducatus.io" >> $DUCATUSD_CONF_FILE
+echo "addnode=snod-1.p90.ducatus.io" >> $DUCATUSD_CONF_FILE
+echo "addnode=snod-2.p90.ducatus.io" >> $DUCATUSD_CONF_FILE
 sudo docker build . -t solo-pool
