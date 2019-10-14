@@ -2,12 +2,12 @@ var Stratum = require('stratum-pool');
 
 var myCoin = {
     "name": "Ducatuscoin",
-    "symbol": "DTC",
+    "symbol": "DUC",
     "algorithm": "scrypt",
 };
 
 const diff      = parseFloat("1.0");
-const variance  = parseFloat("10");
+const variance  = parseFloat("10000");
 
 var ports = {};
 ports[6969] = {diff: diff, varDiff: {minDiff: diff / variance, maxDiff: diff * variance, targetTime: 15, retargetTime: 90, variancePercent: 30}};

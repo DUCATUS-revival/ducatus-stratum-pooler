@@ -7,7 +7,7 @@ const log = bunyan.createLogger({name: 'wyvern-solo-pool'});
 
 const coin = {
   name: 'ducatuscoin',
-  symbol: 'DTC',
+  symbol: 'DUC',
   algorithm: 'scrypt'
 };
 
